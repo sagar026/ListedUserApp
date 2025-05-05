@@ -52,7 +52,8 @@ extension ListViewModel {
 
 //MARK: API Calls
 extension ListViewModel {
-    @MainActor func fetchUsers() async {
+    @MainActor
+    func fetchUsers() async {
         let request = GetUsersRequest()
         do {
             let data = try await apiService.request(request: request)
